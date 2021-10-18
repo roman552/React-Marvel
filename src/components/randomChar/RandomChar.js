@@ -20,7 +20,7 @@ const RandomChar = () => {
 
     }, [])
 
-    const onCharLoaded = () => {
+    const onCharLoaded = (char) => {
         setChar(char);
     }
 
@@ -33,7 +33,7 @@ const RandomChar = () => {
 
     const errorMessage = error ? <ErrorMessage/> : null;
     const spinner = loading ? <Spinner/> : null;
-    const content = !(loading || error || !char) ? <View comic={char} /> : null;
+    const content = !(loading || error || !char) ? <View char={char} /> : null;
 
     return (
         <div className="randomchar">
@@ -69,7 +69,7 @@ const View = ({char}) => {
             <img src={thumbnail} alt="Random character" className="randomchar__img" style={imgStyle} />
             <div className="randomchar__info">
                 <p className="randomchar__name">{name}</p>
-                <p className="randomchar__desc">
+                <p className="randomchar__descr">
                     {description}
                 </p>
                 <div className="randomchar__btns">

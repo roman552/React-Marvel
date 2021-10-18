@@ -10,4 +10,4 @@ const ComicsPage = () => {
     )
 }
 
-export default ComicsList;
+export default ComicsPage;

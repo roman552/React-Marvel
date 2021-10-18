@@ -6,7 +6,6 @@ import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 
 import './comicsList.scss';
-import { func } from "prop-types";
 
 const ComicsList = () => {
     const [ComicsList, setComicsList] = useState([]);
@@ -14,7 +13,7 @@ const ComicsList = () => {
     const [offset, setOffset] = useState(0);
     const [comicsEnded, setComicsEnded] = useState(false);
 
-    const [loading, error, getAllComics] = useMarvelService();
+    const {loading, error, getAllComics}= useMarvelService();
 
     useEffect(() => {
         onRequest(offset, true);
@@ -52,7 +51,7 @@ const ComicsList = () => {
         })
 
         return (
-            <ul className="comics_-grid">
+            <ul className="comics__grid">
                 {items}
             </ul>
         )

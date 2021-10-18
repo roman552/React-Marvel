@@ -6,7 +6,6 @@ import CharInfo from "../charInfo/CharInfo";
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 
 import decoration from "../../resources/img/vision.png";
-import ErrorMessage from "../errorMessage/ErrorMessage";
 
 const MainPage = () => {
     const [selectedChar, setChar] = useState(null);
